@@ -1,4 +1,5 @@
 # AtlasShop Assist
+<<<<<<< HEAD
 Assistente conversacional desenvolvido para responder perguntas com base em dados estruturados e documentos internos, utilizando uma API em FastAPI e uma interface web simples.
 
 ## Visão Geral
@@ -52,3 +53,40 @@ atlasshop-assist/
 │   └── documentacao_tecnica.md
 ├── requirements.txt
 └── README.md
+=======
+Conversational AI assistant capable of answering customer questions using structured data and document-based retrieval (RAG).
+
+## Overview
+
+AtlasShop Assist is a simple conversational system built with FastAPI that simulates a customer support assistant.
+It can:
+
+- Retrieve customer information
+- Check order status
+- Verify refund details
+- Answer questions using internal documentation
+
+---
+
+## How It Works
+
+The system uses a simple orchestration layer to decide how to answer each question:
+
+1. Detects if the message contains a **customer ID (CXXX)**
+2. Detects if the message contains an **order ID (PXXXX)**
+3. Otherwise, performs a **document search (RAG fallback)**
+
+---
+
+## Tech Stack
+
+- Python 3.11
+- FastAPI
+- Pandas
+- HTML + Bootstrap
+- JavaScript (Fetch API)
+
+---
+
+## Project Structure
+>>>>>>> 30649a56a6c666d75f55d400fb6919e53f470d49
