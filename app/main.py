@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="AtlasShop Assist")
 
-app.mount("/front-end", StaticFiles(directory="front-end"), name="front-end")
+app.mount("/public", StaticFiles(directory="public"), name="public")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -26,7 +26,7 @@ class ChatRequest(BaseModel):
 
 @app.get("/")
 def serve_front():
-    return FileResponse("front-end/index.html")
+    return FileResponse("public/index.html")
 
 @app.post("/chat")
 def chat(request: ChatRequest):
