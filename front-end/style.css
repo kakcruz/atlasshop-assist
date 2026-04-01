@@ -1,0 +1,26 @@
+
+  body {
+    background: #f5f6fa;
+  }
+
+  .chat-box {
+    max-width: 800px;
+    margin: 60px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .response-box {
+    margin-top: 20px;
+    padding: 16px;
+    background: #e1f3db;
+    border-radius: 8px;
+    white-space: pre-wrap;
+  }
+
+  .suggestion {
+    border-radius: 20px;
+    font-size: 14px;
+  }

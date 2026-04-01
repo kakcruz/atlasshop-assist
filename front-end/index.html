@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtlasShop Assist</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/front-end/style.css">
+  <script src="/front-end/script.js"></script>
+</head>
+
+<body>
+  <div class="chat-box">
+    <h3 class="mb-3 text-center">AtlasShop Assist</h3>
+
+    <div class="mb-3">
+      <p class="fw-bold mb-2">Experimente perguntar:</p>
+
+      <div class="d-flex flex-wrap gap-2">
+        <button class="btn btn-light suggestion" onclick="setMessage('me fale tudo sobre o cliente C001')">
+          Cliente C001 completo
+        </button>
+        <button class="btn btn-light suggestion" onclick="setMessage('quero detalhes do pedido P1002')">
+          Detalhes pedido P1002
+        </button>
+        <button class="btn btn-light suggestion" onclick="setMessage('o cliente C003 está ativo e qual o plano?')">
+          Cliente C003 status
+        </button>
+        <button class="btn btn-light suggestion" onclick="setMessage('pedido P1004 tem reembolso?')">
+          Reembolso P1004
+        </button>
+        <button class="btn btn-light suggestion" onclick="setMessage('informações completas do pedido P1005')">
+          Pedido P1005 completo
+        </button>
+        <button class="btn btn-light suggestion" onclick="setMessage('me fale tudo sobre o cliente C002')">
+          Cliente C002 completo
+        </button>
+        <button class="btn btn-light suggestion" onclick="setMessage('quero detalhes do pedido P1001')">
+          Detalhes pedido P1001
+        </button>
+        <button class="btn btn-light suggestion" onclick="setMessage('o cliente C004 está ativo e qual o plano?')">
+          Cliente C004 status
+        </button>
+        <button class="btn btn-light suggestion" onclick="setMessage('pedido P1003 tem reembolso?')">
+          Reembolso P1003
+        </button>
+        <button class="btn btn-light suggestion" onclick="setMessage('informações completas do pedido P1002')">
+          Pedido P1002 completo
+        </button>
+      </div>
+    </div>
+
+    <textarea id="message" class="form-control mb-3" placeholder="Digite sua pergunta..."></textarea>
+
+    <div class="d-flex gap-2 mt-2">
+      <button class="btn btn-primary w-100" onclick="sendMessage()">Enviar</button>
+      <button class="btn btn-outline-danger" onclick="clearChat()">Limpar</button>
+    </div>
+
+    <div id="loading" class="text-center mt-3" style="display:none;">
+      <div class="spinner-border text-primary"></div>
+    </div>
+
+    <div id="response" class="response-box mt-3">
+      A resposta aparecerá aqui.
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
