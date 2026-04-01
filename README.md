@@ -25,31 +25,42 @@ O AtlasShop Assist é um projeto de IA conversacional criado como desafio técni
 - JavaScript
 - Bootstrap
 
-## Estrutura do Projeto
-```bash
-atlasshop-assist/
-├── app/
-│   ├── main.py
-│   ├── orchestrator.py
-│   ├── rag.py
-│   └── tools.py
-├── data/
-│   ├── clientes.csv
-│   ├── pedidos.csv
-│   └── reembolsos.csv
-├── knowledge/
-│   ├── catalogo_planos.md
-│   ├── comunicados_incidentes.md
-│   ├── faq_atendimento.md
-│   ├── playbook_escalonamento.md
-│   ├── politica_cancelamento_reembolso_antiga.md
-│   └── politica_cancelamento_reembolso_atual.md
-├── public/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-├── docs/
-│   └── documentacao_tecnica.md
-├── requirements.txt
-└── README.md
+###### Como Executar o Projeto
+
+## 1. Extrair o projeto
+- Baixe o arquivo `.zip`
+- Extraia o conteúdo em uma pasta local
+
+ ## 2. Abrir o projeto
+- Abra a pasta do projeto no VS Code ou terminal
+
+## 3. Criar e ativar ambiente virtual
+
+- Windows
+python -m venv .venv
+.venv\Scripts\activate
+
+- Linux/Mac
+python3 -m venv .venv
+source .venv/bin/activate
+
+ ## 4. Instalar dependencias 
+pip install -r requirements.txt
+
+## 5.Executar a aplicação
+uvicorn app.main:app --reload
+
+## Acessar no navegador
+- aplicação
+http://127.0.0.1:8000
+
+- documentação API
+http://127.0.0.1:8000/docs
+
+
+## Como usar
+Digite uma pergunta no campo de texto ou utilize os exemplos disponíveis na interface.
+O sistema irá:
+- consultar dados estruturados (clientes, pedidos, reembolsos)
+- ou buscar informações na base documental (knowledge/)
 
